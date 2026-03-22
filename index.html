@@ -4,23 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/style.css">
-    <title>Todo app</title>
+    <title>Colour Picker</title>
+
+    <!-- Javscript -->
     <script src="javascript/app.js" defer></script>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <!-- Font Families -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500;600&family=Bodoni+Moda:wght@400;600;700&display=swap"
+        rel="stylesheet" />
+
 </head>
 
 <body>
-    <h1>Todo App</h1>
-    <div class="wrapper">
-        <form>
-            <input id="todo-input" type="text" placeholder="write anything and hit enter to add" autocomplete="off">
-            <button id="add-button">Add</button>
-        </form>
-        <ul id="todo-list">
-           
-        </ul>
+
+    <div class="picker">
+
+        <div class="options-picker">
+            <label for="option">Choose an option </label>
+            <select name="option" id="option">
+                <option value="Solid"> Solid Color</option>
+                <option value="Linear">Linear Gradient</option>
+            </select>
+            <select name="angle" id="angle">
+                <option value="to bottom">Top → Bottom</option>
+                <option value="to right">Left → Right</option>
+                <option value="45deg">45°</option>
+                <option value="90deg">90°</option>
+                <option value="120deg">120°</option>
+                <option value="150deg">150°</option>
+            </select>
+
+        </div>
+
+
+        <div class="color-inputs">
+            <div class="color-group active">
+                <label for="color1">Color 1</label>
+                <input type="color" id="color1" name="color" value="#fff">
+            </div>
+
+            <div class="color-group">
+                <label for="color2">Color 2</label>
+                <input type="color" id="color2" name="color" value="#fff">
+            </div>
+        </div>
+
+
+        <h2><span id="html-txt">#fff</span></h2>
 
     </div>
+
 </body>
 
 </html>
